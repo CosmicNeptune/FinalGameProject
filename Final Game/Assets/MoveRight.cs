@@ -5,16 +5,33 @@ using UnityEngine;
 public class MoveRight : MonoBehaviour
 {
     public float speed = 5f;
+    
 
-    public float targetYPosition = -4f;
-   
+    private Rigidbody2D rb;
+    
+    public float deathY = -2f;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
-        
-        if(Mathf.Approximately(transform.position.y, targetYPosition))
+
+        if (transform.position.y < deathY || speed < 5)
         {
-            Destroy(gameObject);
+            Respawn();
         }
+
+        void Respawn()
+        {
+            
+            transform.position = new Vector3(-10.31f, 0.22f, 0);
+           
+        }
+
+
     }
 }
