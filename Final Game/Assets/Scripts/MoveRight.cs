@@ -6,14 +6,24 @@ public class MoveRight : MonoBehaviour
 {
 
     private bool isWaiting = true;
-
     public float speed = 5f;
-
     public Animator animator;
-
     private Rigidbody2D rb;
-    
     public float deathY = -2f;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("EndPoint"))
+        {
+            
+            animator.SetFloat("speed", 0);
+            speed = 0;
+
+        }
+
+
+    }
 
     private void Start()
     {
@@ -43,7 +53,7 @@ public class MoveRight : MonoBehaviour
         animator.SetFloat("speed", 2);
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        if (transform.position.y < deathY || speed < 5)
+        if (transform.position.y < deathY)
         {
             Respawn();
         }
