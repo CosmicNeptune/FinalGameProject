@@ -16,14 +16,22 @@ public class MoveRight : MonoBehaviour
 
         if (other.gameObject.CompareTag("EndPoint"))
         {
-            
+
             animator.SetFloat("speed", 0);
             speed = 0;
 
         }
+        else if (other.gameObject.CompareTag("ObjectHit"))
+        {
+            speed = 0;
+            animator.SetFloat("speed", 0);
+            transform.position = new Vector3(-14.05f, -1.28f, 0);
 
+        }
 
     }
+
+    
 
     private void Start()
     {
@@ -58,6 +66,7 @@ public class MoveRight : MonoBehaviour
             Respawn();
         }
 
+       
         void Respawn()
         {
             speed = 0;

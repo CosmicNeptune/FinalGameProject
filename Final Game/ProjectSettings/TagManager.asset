@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RespawnPoint
   - EndPoint
+  - ObjectHit
   layers:
   - Default
   - TransparentFX
