@@ -311,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -174, y: -95.5}
-  m_SizeDelta: {x: 164, y: 164}
+  m_AnchoredPosition: {x: -108, y: 47.4977}
+  m_SizeDelta: {x: 255, y: 255.0045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416291494
 MonoBehaviour:
@@ -357,7 +357,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416291495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 769189518}
+        m_TargetAssemblyTypeName: MoveRight, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416291495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,6 +2956,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &769189518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7396032668676385789, guid: 818b03e616395a54d8ebb9a05e23dbe5, type: 3}
+  m_PrefabInstance: {fileID: 7325157436839526941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edd681cdc74ad7428bc928d2c4aaeb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075912473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,8 +3604,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 172, y: -95.5}
-  m_SizeDelta: {x: 164, y: 164}
+  m_AnchoredPosition: {x: 136, y: 47.499}
+  m_SizeDelta: {x: 255, y: 255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784240551
 MonoBehaviour:
@@ -3627,7 +3650,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1784240552}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 769189518}
+        m_TargetAssemblyTypeName: MoveRight, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1784240552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3971,6 +4006,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7396032668676385789, guid: 818b03e616395a54d8ebb9a05e23dbe5, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1737588406}
     - target: {fileID: 8490141915646490309, guid: 818b03e616395a54d8ebb9a05e23dbe5, type: 3}
       propertyPath: m_Name
       value: character_0

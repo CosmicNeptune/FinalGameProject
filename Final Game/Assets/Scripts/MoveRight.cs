@@ -17,6 +17,11 @@ public class MoveRight : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -41,6 +46,7 @@ public class MoveRight : MonoBehaviour
 
     private void Start()
     {
+        deathScreen.SetActive(false);
         transform.position = new Vector3(-14.05f, -1.28f, 0);
         animator.SetFloat("speed", 0);
 
