@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveRight : MonoBehaviour
 {
-
+    public GameObject deathScreen;
     private bool isWaiting = true;
     public float speed = 5f;
     public Animator animator;
     private Rigidbody2D rb;
     public float deathY = -2f;
+
+    public void PlayGame()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,7 +32,7 @@ public class MoveRight : MonoBehaviour
             speed = 0;
             animator.SetFloat("speed", 0);
             transform.position = new Vector3(-14.05f, -1.28f, 0);
-
+            deathScreen.SetActive(true);
         }
 
     }
@@ -69,6 +75,7 @@ public class MoveRight : MonoBehaviour
        
         void Respawn()
         {
+            deathScreen.SetActive(true);
             speed = 0;
             animator.SetFloat("speed", 0);
             transform.position = new Vector3(-14.05f, -1.28f, 0);

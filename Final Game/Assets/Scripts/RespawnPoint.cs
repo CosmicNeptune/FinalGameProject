@@ -13,6 +13,6 @@ public class RespawnPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(-10.31f, 0.22f, 0);
+        
     }
 }
